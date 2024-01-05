@@ -1,0 +1,45 @@
+.expandable {
+    background-color: var(--color2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.expandable_button {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.expandable_button img {
+    width: 32px;
+    margin-left: auto;
+    transition: transform 0.25s;
+}
+
+.expandable_button_active img {
+    transform: rotate(-180deg);
+}
+
+.expandable_content {
+    font-size: 20px;
+    line-height: 1.2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s;
+}
+
+.expandable_content h3 {
+    margin: 20px 20px 10px 20px;
+    font-size: 22px;
+}
+
+.expandable_content p {
+    margin: 0px 20px 20px 20px;
+}

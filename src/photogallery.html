@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Photo Gallery</title>
+        <link rel="shortcut icon" href="icons/favicon.png" />
+        <link href="styles/global.css" rel="stylesheet" />
+        <script type="module" src="app.js" defer></script>
+    </head>
+
+    <body>
+        <nav>
+            <img src="images/cross.png" />
+            <button id="burger"></button>
+            <div class="links">
+                <a href="/"
+                    ><img src="icons/home.png" />
+                    <div>Home</div>
+                </a>
+                <a href="affiliations.html"
+                    ><img src="icons/people.png" />
+                    <div>Affiliations</div>
+                </a>
+                <a href="beckysblog.html"
+                    ><img src="icons/blog.png" />
+                    <div>Becky's Blog</div>
+                </a>
+                <a href="ourbeliefs.html"
+                    ><img src="icons/bible.png" />
+                    <div>Our Beliefs</div>
+                </a>
+                <a href="ourheritage.html"
+                    ><img src="icons/book.png" />
+                    <div>Our Heritage</div>
+                </a>
+                <a href="ourministries.html"
+                    ><img src="icons/church.png" />
+                    <div>Our Ministries</div>
+                </a>
+                <a href="pastorspicks.html"
+                    ><img src="icons/star.png" />
+                    <div>Pastors Picks</div>
+                </a>
+                <a href="videosermons.html"
+                    ><img src="icons/videos.png" />
+                    <div>Video Sermons</div>
+                </a>
+                <a href="photogallery.html"
+                    ><img src="icons/gallery.png" />
+                    <div>Photo Gallery</div>
+                </a>
+                <a href="formembers.html">
+                    <img src="icons/profile.png" />
+                    <div>For Members</div>
+                </a>
+            </div>
+            <div class="icon_links">
+                <a
+                    href="https://www.facebook.com/Rice-Memorial-Baptist-Church-193611510682934/"
+                    target="_blank"
+                    ><img src="icons/facebook.png"
+                /></a>
+                <a
+                    href="https://www.youtube.com/channel/UCBj0Vqx6NuY0hL4GzHPlnXg"
+                    target="_blank"
+                    ><img src="icons/youtube.png"
+                /></a>
+                <a
+                    href="https://www.google.com/maps?q=85+Lincoln+Street,+northborough,+ma&hl=en&sll=42.036922,-71.683501&sspn=2.203087,4.795532&t=h&hnear=85+Lincoln+St,+Northborough,+Worcester,+Massachusetts+01532&z=16"
+                    target="_blank"
+                    ><img src="icons/map.png"
+                /></a>
+            </div>
+        </nav>
+        <header>
+            <h1>Photo Gallery</h1>
+            <div>
+                <img src="images/church.jpg" />
+                <img src="images/church2.jpg" />
+                <img src="images/church3.jpg" />
+            </div>
+        </header>
+        <main>
+            <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQFMiOB2NLcltrWFDLA0UA-WGCsa0dxFU3n2lUVqutblW-Iu_lFgVLJ3CkTjn1o5ZMpd61zXwTWyflN/embed?start=false&loop=false&delayms=3000&rm=minimal"
+            ></iframe>
+        </main>
+
+        <footer>
+            <div>
+                <a href="mailto:rmbcnorthborough@gmail.com">
+                    <img src="icons/email.png" />
+                    <h2>rmbcnorthborough@gmail.com</h2>
+                </a>
+                <a href="tel:+15083933481">
+                    <img src="icons/phone.png" />
+                    <h2>(508) 393-3481</h2>
+                </a>
+            </div>
+            <form id="contact">
+                <input type="text" placeholder="First Name" id="firstName" />
+                <input type="text" placeholder="Last Name" id="lastName" />
+                <input type="email" placeholder="Email" id="email" />
+                <input type="tel" placeholder="Phone" id="phone" />
+                <input type="text" placeholder="Address" id="address" />
+                <input type="text" placeholder="City/Town" id="city" />
+                <input type="text" placeholder="State" id="state" />
+                <input type="text" placeholder="Zip Code" id="zip" />
+                <textarea placeholder="Message" id="message"></textarea>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+            <p>
+                Website by CPWD of Assabet Valley Regional Technical Highschool
+            </p>
+        </footer>
+    </body>
+</html>

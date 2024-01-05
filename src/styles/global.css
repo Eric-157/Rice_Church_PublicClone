@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    --color1: #fffff0;
+    --color2: #fff7dd;
+    --color3: #03396c;
+    --color4: #0561b8;
+    --color5: #0675de;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color1);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color3);
+    width: 210px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+nav > img {
+    display: flex;
+    height: 100px;
+    margin: 20px auto 10px auto;
+}
+
+nav button {
+    width: 45px;
+    height: 45px;
+    background: none;
+    background-image: url(../icons/hamburger.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    margin: auto 5px auto 5px;
+    display: none;
+}
+
+.search {
+    display: flex;
+    width: 190px;
+    margin: 10px auto;
+}
+
+.search img {
+    background-color: white;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+    height: 26px;
+}
+
+.search img:hover {
+    cursor: pointer;
+}
+
+.search input {
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.links {
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: var(--color3);
+}
+
+.links a {
+    display: flex;
+    margin: 5px 10px 0px 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.links a:hover {
+    background-color: var(--color4);
+}
+
+.links a img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.icon_links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+    gap: 20px;
+    position: fixed;
+    width: 170px;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.icon_links a {
+    width: 43px;
+    height: 43px;
+}
+
+.icon_links img {
+    width: 43px;
+    height: 43px;
+}
+
+header {
+    margin-left: 210px;
+    position: relative;
+}
+
+h1 {
+    font-size: 4.3vw;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 8vw;
+    z-index: 1;
+    color: white;
+}
+
+header div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: black;
+}
+
+header div img {
+    opacity: 0.6;
+    width: 100%;
+}
+
+main {
+    margin: clamp(20px, 2vw, 40px) clamp(20px, 2vw, 40px) clamp(20px, 2vw, 40px)
+        calc(clamp(20px, 2vw, 40px) + 210px);
+}
+
+main > iframe {
+    border: 0;
+    width: 100%;
+    height: 90vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 210px;
+    text-align: center;
+    background-color: var(--color2);
+}
+
+footer div {
+    display: flex;
+    margin: 20px auto 0px auto;
+}
+
+footer div a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
+footer div a img {
+    width: 34px;
+    margin-right: 10px;
+}
+
+footer div a h2 {
+    font-size: 24px;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+footer div a:nth-child(1) {
+    margin-right: 60px;
+}
+
+footer form {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+    grid-template-areas:
+        "First_Name Address Comments"
+        "Last_Name City_Town Comments"
+        "Email State Comments"
+        "Phone Postal_Code Comments"
+        "Submit Submit Submit";
+    gap: 20px;
+    margin: 20px auto 20px auto;
+    padding: 0px clamp(20px, 2vw, 40px) 0px clamp(20px, 2vw, 40px);
+    width: 900px;
+}
+
+footer form input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    font-family: "Trebuchet MS";
+}
+
+footer form input:focus {
+    outline: solid 2px var(--color4);
+}
+
+footer form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: arial;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    resize: none;
+    font-family: "Trebuchet MS";
+}
+
+footer form textarea:focus {
+    outline: solid 2px var(--color4);
+}
+
+#firstName {
+    grid-area: First_Name;
+}
+#lastName {
+    grid-area: Last_Name;
+}
+#email {
+    grid-area: Email;
+}
+#phone {
+    grid-area: Phone;
+}
+#address {
+    grid-area: Address;
+}
+#state {
+    grid-area: State;
+}
+#city {
+    grid-area: City_Town;
+}
+#zip {
+    grid-area: Postal_Code;
+}
+#message {
+    grid-area: Comments;
+}
+
+#contact button {
+    grid-area: Submit;
+    color: white;
+    width: 110px;
+    height: 43px;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit {
+    background-color: var(--color4);
+    padding: 10px;
+}
+
+#submit:hover {
+    background-color: var(--color5);
+}
+
+#submitDone {
+    background-color: #22c55e;
+    padding: 5px;
+}
+
+#submitDone img {
+    height: 100%;
+}
+
+.inputError {
+    outline: 2px solid #ef4444;
+}
+
+footer p {
+    margin: 0px clamp(20px, 2vw, 40px) 20px clamp(20px, 2vw, 40px);
+}
+
+@media (max-width: 1250px) {
+    nav {
+        z-index: 2;
+        width: 100%;
+        height: 55px;
+        flex-direction: row;
+    }
+
+    nav > img {
+        display: none;
+    }
+
+    nav button {
+        display: flex;
+    }
+
+    .search {
+        margin: auto 10px auto auto;
+        width: 200px;
+    }
+
+    .links {
+        position: fixed;
+        height: 100%;
+        width: 0px;
+        transition: width 0.25s;
+        margin-top: 50px;
+    }
+
+    .icon_links {
+        width: 0px;
+        transition: width 0.25s;
+    }
+
+    .open .links {
+        width: 210px;
+    }
+
+    .open .icon_links {
+        width: 170px;
+    }
+
+    .open button {
+        background-image: url(../icons/close.png);
+    }
+
+    header {
+        margin-left: 0;
+        margin-top: 55px;
+    }
+
+    main {
+        margin: clamp(20px, 2vw, 40px) clamp(20px, 2vw, 40px)
+            clamp(20px, 2vw, 40px) clamp(20px, 2vw, 40px);
+    }
+
+    h1 {
+        font-size: 5.3vw;
+    }
+
+    footer {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 6.3vw;
+    }
+
+    footer form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+        grid-template-areas:
+            "First_Name Address"
+            "Last_Name City_Town"
+            "Email State"
+            "Phone Postal_Code"
+            "Comments Comments"
+            "Submit Submit";
+        width: auto;
+    }
+
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div a:nth-child(1) {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr 1fr;
+        grid-template-areas:
+            "First_Name"
+            "Last_Name"
+            "Email"
+            "Phone"
+            "Address"
+            "City_Town"
+            "State"
+            "Postal_Code"
+            "Comments"
+            "Submit";
+    }
+}
+
+@media (max-width: 450px) {
+    footer div a img {
+        width: 30px;
+    }
+
+    footer div a h2 {
+        font-size: 22px;
+    }
+}

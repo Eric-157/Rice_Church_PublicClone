@@ -1,0 +1,45 @@
+main {
+    text-align: center;
+}
+
+main p {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(20px, 2vw, 40px);
+}
+
+.grid a {
+    color: black;
+    text-decoration: none;
+}
+
+.grid a img {
+    width: 60%;
+}
+
+.grid a h3 {
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.grid a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
